@@ -69,15 +69,7 @@ int main(int, char **) {
 
     auto pos_pairs = get_all_pairs(pos_set);
     auto neg_pairs = get_all_pairs(neg_set);
-
-    for (const auto &posv: pos_pairs) {
-        // cout << posv.first <<" "<<posv.second <<endl;
-    }
-    for (const auto &posv: neg_pairs) {
-        //cout << posv.first <<" "<<posv.second<< endl;
-    }
-
-
+    
     std::for_each(pos_pairs.begin(), pos_pairs.end(),
                   [&result, &neg_set, &is_zero_contains](const std::pair<int, int> &p) {
                       for (const auto &ne: neg_set) {
